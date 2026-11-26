@@ -1,35 +1,101 @@
-<!doctype html>
+ <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Osobné portfólio – Artur Abramov">
+    <title>Artur Abramov | Portfólio</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+    <header class="header">
+        <div class="container navigation">
+            <a href="#domov" class="logo">ARTUR.</a>
+            <button class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">☰</button>
+            <nav id="navigation">
+                <a href="#domov">Domov</a>
+                <a href="#projekty">Projekty</a>
+                <a href="#omne">O mne</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
-    </div>
+    <main>
+        <section id="domov" class="hero">
+            <div class="container hero-content">
+                <span class="eyebrow">OSOBNÉ PORTFÓLIO</span>
+                <h1>Artur<br>Abramov.</h1>
+                <p>Študent so záujmom o elektronický obchod, manažment a tvorbu webových stránok.</p>
+                <a href="#projekty" class="button">Moje projekty →</a>
+            </div>
+        </section>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
-  </main>
+        <section id="projekty" class="section">
+            <div class="container">
+                <span class="eyebrow">MOJA PRÁCA</span>
+                <h2>Moje projekty</h2>
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <span class="number">01</span>
+                        <span class="category">WEB DIZAJN</span>
+                        <h3>Kaviareň Mlyn</h3>
+                        <p>Návrh webovej stránky pre lokálnu kaviareň a pražiareň kávy v Žiline.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="number">02</span>
+                        <span class="category">E-COMMERCE</span>
+                        <h3>E-shop</h3>
+                        <p>Projekt internetového obchodu zameraný na prezentáciu produktov a online nakupovanie.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="number">03</span>
+                        <span class="category">INFORMAČNÉ SYSTÉMY</span>
+                        <h3>Databázový projekt</h3>
+                        <p>Návrh databázy a spracovanie údajov v prostredí Microsoft Access.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="omne" class="section about">
+            <div class="container about-grid">
+                <div class="portrait-placeholder">AA</div>
+                <div>
+                    <span class="eyebrow">KTO SOM</span>
+                    <h2>O mne</h2>
+                    <p>Volám sa Artur Abramov. Zaujímam sa o digitálne technológie, elektronický obchod a tvorbu moderných webových stránok.</p>
+                    <p>Prostredníctvom školských projektov rozvíjam svoje praktické zručnosti v oblasti manažmentu, webového dizajnu a informačných systémov.</p>
+                    <div class="skills">
+                        <span>Web dizajn</span>
+                        <span>E-commerce</span>
+                        <span>Manažment</span>
+                        <span>UX/UI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontakt" class="footer">
+        <div class="container">
+            <span class="eyebrow">BUĎME V KONTAKTE</span>
+            <h2>Kontakt</h2>
+            <p>Artur Abramov | Osobné portfólio</p>
+            <a href="https://github.com/abramovartur586-ux"
+               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <div class="copyright">
+                © 2026 Artur Abramov
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

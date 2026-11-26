@@ -1,75 +1,327 @@
-/* Vzhľad štartovej stránky — vrstva CSS (ako stránka vyzerá).
-   Obsah (čo na stránke je) nájdeš v index.html. */
+:root {
+    --burgundy: #762C29;
+    --peach: #EDBE90;
+    --cream: #F0ECE2;
+    --brown: #4D3E37;
+    --white: #FFFFFF;
+}
 
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: #f8fafc;
-  color: #1e293b;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  line-height: 1.5;
+    font-family: Inter, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.7;
 }
 
-.uvitanie {
-  max-width: 36rem;
-  text-align: center;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.emoji {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* Navigácia */
+
+.header {
+    background: var(--burgundy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-h1 {
-  font-size: 1.875rem;
-  margin: 0 0 0.75rem;
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
 }
 
-.podtext {
-  color: #475569;
-  margin: 0 0 1.5rem;
+.logo {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
 
-.karta {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  padding: 1.25rem;
-  text-align: left;
+nav {
+    display: flex;
+    gap: 32px;
 }
 
-.karta-nadpis {
-  font-weight: 600;
-  margin: 0 0 0.5rem;
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
 }
 
-.karta ol {
-  margin: 0;
-  padding-left: 1.25rem;
+nav a:hover {
+    color: var(--peach);
 }
 
-.karta li {
-  margin-bottom: 0.25rem;
-  color: #334155;
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
-.karta code {
-  background: #f1f5f9;
-  padding: 0 0.25rem;
-  border-radius: 0.25rem;
+/* Hero */
+
+.hero {
+    background: var(--peach);
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
 }
 
-.poznamka {
-  font-size: 0.75rem;
-  color: #94a3b8;
-  margin-top: 1.5rem;
+.hero-content {
+    animation: fadeIn 0.8s ease;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 9vw, 110px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 26px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 550px;
+    margin-bottom: 32px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: var(--brown);
+}
+
+/* Projekty */
+
+.section {
+    padding: 90px 0;
+}
+
+h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--white);
+    padding: 35px;
+    border-top: 4px solid var(--burgundy);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.number {
+    display: block;
+    font-size: 48px;
+    color: var(--burgundy);
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.category {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.project-card p {
+    font-size: 15px;
+}
+
+/* O mne */
+
+.about {
+    background: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.portrait-placeholder {
+    background: var(--peach);
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--burgundy);
+}
+
+.about p {
+    margin-bottom: 18px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.skills span {
+    background: var(--cream);
+    padding: 7px 14px;
+    font-size: 13px;
+}
+
+/* Kontakt */
+
+.footer {
+    background: var(--burgundy);
+    color: var(--white);
+    padding: 65px 0 25px;
+}
+
+.footer h2 {
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: var(--peach);
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.copyright {
+    border-top: 1px solid #FFFFFF40;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+/* Animácie */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+}
+
+/* Responzivita */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 24px;
+        background: var(--burgundy);
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .projects-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+
+    .portrait-placeholder {
+        min-height: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
 }
