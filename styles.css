@@ -409,4 +409,23 @@ button:focus-visible {
     .hero::after {
         display: none;
     }
+}/* Ikony sekcií */
+
+.section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4em;
+    height: 1.4em;
+    background: #762C29;
+    color: #F0ECE2;
+    font-size: 0.65em;
+    border-radius: 6px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer .section-icon {
+    background: #EDBE90;
+    color: #762C29;
 }
