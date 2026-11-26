@@ -325,3 +325,48 @@ button:focus-visible {
         transition: none !important;
     }
 }
+/* Hero – fotografické pozadie */
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30, 20, 15, 0.85),
+            rgba(30, 20, 15, 0.30)
+        ),
+        url("img/hero.jpg");
+    background-size: cover;
+    background-position: center 65%;
+    color: #F0ECE2;
+}
+
+.hero .button {
+    background: #EDBE90;
+    color: #4D3E37;
+}
+
+.hero .button:hover {
+    background: #FFFFFF;
+}/* Hero – fotografické pozadie */
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30, 20, 15, 0.85),
+            rgba(30, 20, 15, 0.30)
+        ),
+        url("img/hero.jpg");
+    background-size: cover;
+    background-position: center 65%;
+    color: #F0ECE2;
+}
+
+.hero .button {
+    background: #EDBE90;
+    color: #4D3E37;
+}
+
+.hero .button:hover {
+    background: #FFFFFF;
+}
