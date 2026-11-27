@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaviareň Aroma</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F5EFE6;
+            color: #382C25;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #573B2E;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: #D9B99B;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 44px;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+        .opening {
+            background: white;
+            padding: 20px;
+            color: #382C25;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 14px;
+            font: inherit;
+            border: 1px solid #BBAA99;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #573B2E;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #573B2E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: 1fr;
+                min-width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <strong>KAVIAREŇ AROMA</strong>
+
+    <nav>
+        <a href="#domov">Domov</a>
+        <a href="#ponuka">Ponuka</a>
+        <a href="#onas">O nás</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="hero" id="domov">
+        <h1>Kaviareň Aroma</h1>
+        <p>Miesto, kde každý deň vonia kávou.</p>
+    </div>
+
+    <section id="ponuka">
+
+        <h2>Naša ponuka</h2>
+
+        <div class="products">
+
+            <article class="product">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23D9B99B'/%3E%3Ccircle cx='150' cy='90' r='65' fill='%23FFF8EF'/%3E%3Ccircle cx='150' cy='90' r='43' fill='%23573B2E'/%3E%3C/svg%3E" alt="Espresso">
+
+                <h3>Espresso</h3>
+                <p>Silná a aromatická káva.</p>
+                <p class="price">2,20 €</p>
+            </article>
+
+            <article class="product">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23D9B99B'/%3E%3Ccircle cx='150' cy='90' r='65' fill='%23FFF8EF'/%3E%3Ccircle cx='150' cy='90' r='48' fill='%23BD8756'/%3E%3Ccircle cx='150' cy='90' r='30' fill='%23FFF8EF'/%3E%3C/svg%3E" alt="Cappuccino">
+
+                <h3>Cappuccino</h3>
+                <p>Káva s jemnou mliečnou penou.</p>
+                <p class="price">3,00 €</p>
+            </article>
+
+            <article class="product">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Crect width='300' height='180' fill='%23E8D8C4'/%3E%3Ccircle cx='150' cy='90' r='65' fill='%23FFF8EF'/%3E%3Ccircle cx='150' cy='90' r='48' fill='%23BD8756'/%3E%3Cpath d='M150 120 Q90 80 125 65 Q145 55 150 78 Q165 50 185 65 Q215 90 150 120' fill='%23FFF8EF'/%3E%3C/svg%3E" alt="Latte">
+
+                <h3>Latte</h3>
+                <p>Jemná káva s teplým mliekom.</p>
+                <p class="price">3,50 €</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="onas">
+
+        <h2>O nás</h2>
+
+        <p>Sme malá kaviareň s láskou ku kvalitnej káve a príjemnej atmosfére.</p>
+
+        <div class="opening">
+
+            <h3>Otváracie hodiny</h3>
+
+            <p>Pondelok – piatok: 8:00 – 19:00</p>
+            <p>Sobota – nedeľa: 9:00 – 17:00</p>
+
+        </div>
+    </section>
+
+    <section id="kontakt">
+
+        <h2>Kontaktujte nás</h2>
+
+        <form id="contact-form">
+
+            <label for="meno">Meno</label>
+            <input id="meno" type="text" required>
+
+            <label for="email">E-mail</label>
+            <input id="email" type="email" required>
+
+            <label for="sprava">Správa</label>
+            <textarea id="sprava" rows="5" required></textarea>
+
+            <button type="submit">Odoslať správu</button>
+
+        </form>
+
+        <p id="status" role="status"></p>
+
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Kaviareň Aroma | Školský projekt
+</footer>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("status").textContent =
+            "Ďakujeme za správu. (Ukážkový formulár)";
+
+        this.reset();
+
+    });
+</script>
+
+</body>
+</html>
